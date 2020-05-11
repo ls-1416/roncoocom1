@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.dao.SysUserMapper">
+    <select id="getAllSysUser" resultType="org.sang.entity.SysUser">
+        SELECT * FROM sys_user ORDER BY id
+    </select>
+    <select id="getAllSysUserByMobile" parameterType="BigInteger" resultType="org.sang.entity.SysUser">
+        SELECT * FROM sys_user where mobile=#{mobile} ORDER BY id
+    </select>
+    <delete id="deleteSysUserById" parameterType="Long">
+        delete from sys_user where id=#{id}
+    </delete>
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into springboot.sys_user(gmt_create, gmt_modified, status_id, sort, user_no, mobile, real_name, remark)
+        values (#{gmtCreate}, #{gmtModified}, #{statusId}, #{sort}, #{userNo}, #{mobile}, #{realName}, #{remark})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update springboot.sys_user
+        <set>
+            <if test="gmtCreate != null">
+                gmt_create = #{gmtCreate},
+            </if>
+            <if test="gmtModified != null">
+                gmt_modified = #{gmtModified},
+            </if>
+            <if test="statusId != null">
+                status_id = #{statusId},
+            </if>
+            <if test="sort != null">
+                sort = #{sort},
+            </if>
+            <if test="userNo != null">
+                user_no = #{userNo},
+            </if>
+            <if test="mobile != null and mobile != ''">
+                mobile = #{mobile},
+            </if>
+            <if test="realName != null and realName != ''">
+                real_name = #{realName},
+            </if>
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+</mapper>
