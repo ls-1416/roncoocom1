@@ -14,7 +14,7 @@ public class SysLog implements Serializable {
     /**
     * 主键
     */
-    private Integer id;
+    private Long id;
     /**
     * 创建时间
     */
@@ -49,11 +49,11 @@ public class SysLog implements Serializable {
     private String content;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

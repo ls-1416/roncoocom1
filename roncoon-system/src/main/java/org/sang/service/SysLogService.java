@@ -17,7 +17,7 @@ public interface SysLogService {
      * @param id 主键
      * @return 实例对象
      */
-    SysLog queryById(Integer id);
+    SysLog queryById(Long id);
 
     /**
      * 查询多条数据
@@ -34,7 +34,7 @@ public interface SysLogService {
      * @param sysLog 实例对象
      * @return 实例对象
      */
-    SysLog insert(SysLog sysLog);
+    int insert(SysLog sysLog);
 
     /**
      * 修改数据
@@ -50,6 +50,6 @@ public interface SysLogService {
      * @param id 主键
      * @return 是否成功
      */
-    boolean deleteById(Integer id);
+    boolean deleteById(Long id);
 
 }

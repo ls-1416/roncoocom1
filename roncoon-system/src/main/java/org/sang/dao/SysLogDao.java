@@ -1,5 +1,6 @@
 package org.sang.dao;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.sang.entity.SysLog;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
  * @author makejava
  * @since 2020-05-11 17:09:22
  */
+@Mapper
 public interface SysLogDao {
 
     /**
@@ -18,7 +20,7 @@ public interface SysLogDao {
      * @param id 主键
      * @return 实例对象
      */
-    SysLog queryById(Integer id);
+    SysLog queryById(Long id);
 
     /**
      * 查询指定行数据
@@ -60,6 +62,6 @@ public interface SysLogDao {
      * @param id 主键
      * @return 影响行数
      */
-    int deleteById(Integer id);
+    int deleteById(Long id);
 
 }

@@ -26,7 +26,7 @@ public class SysLogServiceImpl implements SysLogService {
      * @return 实例对象
      */
     @Override
-    public SysLog queryById(Integer id) {
+    public SysLog queryById(Long id) {
         return this.sysLogDao.queryById(id);
     }
 
@@ -49,9 +49,15 @@ public class SysLogServiceImpl implements SysLogService {
      * @return 实例对象
      */
     @Override
-    public SysLog insert(SysLog sysLog) {
-        this.sysLogDao.insert(sysLog);
-        return sysLog;
+    public int insert(SysLog sysLog) {
+        int i=0;
+        try{
+            i=sysLogDao.insert(sysLog);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return i;
+//        return sysLog;
     }
 
     /**
@@ -73,7 +79,7 @@ public class SysLogServiceImpl implements SysLogService {
      * @return 是否成功
      */
     @Override
-    public boolean deleteById(Integer id) {
+    public boolean deleteById(Long id) {
         return this.sysLogDao.deleteById(id) > 0;
     }
 }

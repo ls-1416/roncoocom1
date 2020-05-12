@@ -5,7 +5,7 @@
     <resultMap type="org.sang.entity.SysLog" id="SysLogMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
-        <result property="userNo" column="user_no" jdbcType="INTEGER"/>
+        <result property="userNo" column="user_no" jdbcType="BIGINT"/>
         <result property="realName" column="real_name" jdbcType="VARCHAR"/>
         <result property="ip" column="ip" jdbcType="VARCHAR"/>
         <result property="operation" column="operation" jdbcType="VARCHAR"/>

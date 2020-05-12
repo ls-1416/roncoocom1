@@ -1,6 +1,8 @@
 package org.sang.service;
 
 import org.sang.entity.Msg;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 /**
