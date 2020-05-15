@@ -16,6 +16,11 @@ public class DataSourceConfig {
         return DruidDataSourceBuilder.create().build();
     }
     @Bean
+    @ConfigurationProperties("spring.datasource.there")
+    DataSource dsThere(){
+        return DruidDataSourceBuilder.create().build();
+    }
+    @Bean
     @ConfigurationProperties("spring.datasource.two")
     DataSource dsTwo(){
         return DruidDataSourceBuilder.create().build();

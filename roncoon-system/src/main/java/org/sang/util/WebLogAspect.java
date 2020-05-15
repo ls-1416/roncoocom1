@@ -60,13 +60,6 @@ public class WebLogAspect {
         sysLog.setPath(joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
         sysLog.setContent(Arrays.toString(joinPoint.getArgs()));
         sysLog.setOperation(myLog.value());
-//        loggers.setLoggertype(request.getMethod());
-//        loggers.setLoggercreateid(1);
-//        loggers.setLoggerparameter(Arrays.toString(joinPoint.getArgs()));
-//        loggers.setLoggerip(GetIp.getIpAddress(request));
-//        loggers.setLoggerclass(joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
-//        loggers.setLoggercreatetime(new Date());
-        sysLogService.insert(sysLog);
-
+//        sysLogService.insert(sysLog);
     }
 }
