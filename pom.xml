@@ -13,6 +13,7 @@
         <module>roncoon-common</module>
         <module>roncoon-system</module>
         <module>roncoon-trade</module>
+        <module>roncoon-search</module>
     </modules>
 
     <dependencyManagement>

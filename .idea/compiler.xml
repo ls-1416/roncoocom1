@@ -8,8 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="roncoontrade" />
         <module name="roncooncommon" />
-        <module name="roncoonsystem" />
+        <module name="roncoonsearch" />
         <module name="roncoonauth" />
+        <module name="roncoonsystem" />
       </profile>
     </annotationProcessing>
   </component>
